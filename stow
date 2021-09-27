@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [[ `uname` == "Darwin" ]]; then
+    stow macos shared
+elif [[ `uname` == "Linux" ]]; then
+    stow linux shared
+fi

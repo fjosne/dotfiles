@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+if [[ `uname` == "Darwin" ]]; then
+elif [[ `uname` == "Linux" ]]; then
+    alias ls="ls -lA --color=auto"
+
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+fi
+
+alias vim="nvim"
+alias sudo="sudo "

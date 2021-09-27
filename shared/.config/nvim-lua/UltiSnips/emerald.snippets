@@ -1,0 +1,77 @@
+snippet init "Initially" bA
+initially
+	$0
+end initially
+endsnippet
+
+snippet proc "Process" bA
+process
+	$0
+end process
+endsnippet
+
+snippet obj "Object" bA
+const ${1:objectname} <- object ${2:ObjectName}
+	$0
+end $2
+endsnippet
+
+snippet type "Typeobject" bA
+const ${1:typename} <- typeobject ${2:TypeName}
+	$0
+end $2
+endsnippet
+
+snippet op "Operation" bA
+operation ${1:opname}[$2]$3
+	$0
+end $1
+endsnippet
+
+snippet xop "Export operation" bA
+export operation ${1:opname}[$2]$3
+	$0
+end $1
+endsnippet
+
+snippet fu "Function" bA
+function ${1:funcname}[$2] -> [$3]
+	$0
+end $1
+endsnippet
+
+snippet xfu "Export function" bA
+export function ${1:funcname}[$2] -> [$3]
+	$0
+end $1
+endsnippet
+
+snippet const "Constant" bA
+const ${1:constname} <- $0
+endsnippet
+
+snippet var "Variable" bA
+var ${1:varname} : $2 <- $0
+endsnippet
+
+snippet std "stdout" bA
+stdout.putstring[$1]$0
+endsnippet
+
+snippet $s "$stdout" bA
+$1\$stdout.putstring[$2]$0
+endsnippet
+
+snippet top "Typeobject operation" bA
+operation $1[$2]$0
+endsnippet
+
+snippet tfu "Typeobject function" bA
+function $1[$2] -> [$3]$0
+endsnippet
+
+snippet fori "Iterative for loop" bA
+for ${1:i} : Integer <- ${2:0} while $3 by $1 <- $1 + 1
+	$0
+end for
+endsnippet
