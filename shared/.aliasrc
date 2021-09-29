@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 if [[ `uname` == "Darwin" ]]; then
+    alias ls="ls -lA"
 elif [[ `uname` == "Linux" ]]; then
     alias ls="ls -lA --color=auto"
 
