@@ -21,7 +21,8 @@ local dracula = function()
     vim.cmd('colo dracula')
 end
 
-dracula()
+-- dracula()
+vim.cmd('colo gruvbox')
 
 
 

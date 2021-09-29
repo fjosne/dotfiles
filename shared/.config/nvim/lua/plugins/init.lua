@@ -79,21 +79,17 @@ return require('packer').startup(function()
     use 'lervag/vimtex'
 
     -- colorschemes
-    use 'gruvbox-community/gruvbox'
-    use 'joshdick/onedark.vim'
-    use 'dracula/vim'
-    use 'arcticicestudio/nord-vim'
-    use 'drewtempelmeyer/palenight.vim'
-    use 'herrbischoff/cobalt2.vim'
-    use 'ray-x/aurora'
-    use 'Th3Whit3Wolf/one-nvim'
-    use 'sainnhe/sonokai'
-    use 'yonlu/omni.vim'
-    use 'sainnhe/edge'
-    use {'kyoz/purify',
-        rtp = 'vim'
+    -- use 'gruvbox-community/gruvbox'
+    use {
+        'ellisonleao/gruvbox.nvim',
+        requires = {'rktjmp/lush.nvim'}
     }
-    use 'ayu-theme/ayu-vim'
+    -- use 'joshdick/onedark.vim'
+    -- use 'dracula/vim'
+    use 'Mofiqul/dracula.nvim'
+    -- use 'arcticicestudio/nord-vim'
+    -- use 'drewtempelmeyer/palenight.vim'
+    use 'Th3Whit3Wolf/one-nvim'
 
     -- hex colorizer
     use 'ap/vim-css-color'

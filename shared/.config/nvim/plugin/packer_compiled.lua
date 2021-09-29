@@ -69,21 +69,9 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  aurora = {
+  ["dracula.nvim"] = {
     loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/aurora"
-  },
-  ["ayu-vim"] = {
-    loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/ayu-vim"
-  },
-  ["cobalt2.vim"] = {
-    loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/cobalt2.vim"
-  },
-  edge = {
-    loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/edge"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/dracula.nvim"
   },
   ["galaxyline.nvim"] = {
     config = { "\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29customization.statusline\frequire\0" },
@@ -95,9 +83,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/simen/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
-  gruvbox = {
+  ["gruvbox.nvim"] = {
     loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/gruvbox"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/gruvbox.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -115,9 +103,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/simen/.local/share/nvim/site/pack/packer/start/lsp-status.nvim"
   },
-  ["nord-vim"] = {
+  ["lush.nvim"] = {
     loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/nord-vim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/lush.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -139,26 +127,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/simen/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
-  ["omni.vim"] = {
-    loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/omni.vim"
-  },
   ["one-nvim"] = {
     loaded = true,
     path = "/home/simen/.local/share/nvim/site/pack/packer/start/one-nvim"
-  },
-  ["onedark.vim"] = {
-    loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/onedark.vim"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
     path = "/home/simen/.local/share/nvim/site/pack/packer/opt/packer.nvim"
-  },
-  ["palenight.vim"] = {
-    loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/palenight.vim"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -167,14 +143,6 @@ _G.packer_plugins = {
   ["popup.nvim"] = {
     loaded = true,
     path = "/home/simen/.local/share/nvim/site/pack/packer/start/popup.nvim"
-  },
-  purify = {
-    loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/purify/vim"
-  },
-  sonokai = {
-    loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/sonokai"
   },
   ["sql.nvim"] = {
     loaded = true,
@@ -203,10 +171,6 @@ _G.packer_plugins = {
   ultisnips = {
     loaded = true,
     path = "/home/simen/.local/share/nvim/site/pack/packer/start/ultisnips"
-  },
-  vim = {
-    loaded = true,
-    path = "/home/simen/.local/share/nvim/site/pack/packer/start/vim"
   },
   ["vim-css-color"] = {
     loaded = true,
@@ -243,10 +207,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Runtimepath customization
-time([[Runtimepath customization]], true)
-vim.o.runtimepath = vim.o.runtimepath .. ",/home/simen/.local/share/nvim/site/pack/packer/start/purify/vim"
-time([[Runtimepath customization]], false)
 -- Config for: galaxyline.nvim
 time([[Config for galaxyline.nvim]], true)
 try_loadstring("\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29customization.statusline\frequire\0", "config", "galaxyline.nvim")
