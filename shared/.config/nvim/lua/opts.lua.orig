@@ -20,7 +20,6 @@ set.hlsearch	     	= false		    -- only highlight current match
 
 set.expandtab        	= true      	-- tabs -> spaces
 set.tabstop          	= 4         	-- 1 tab = 4 spaces
--- set.softtabstop      	= 4
 set.shiftwidth       	= 4         	-- 4 spaces when using < or >
 set.autoindent       	= true      	-- keep indentation on newlines
 set.cindent          	= true      	-- automatic C program indenting
@@ -33,9 +32,9 @@ set.writebackup      	= false
 -- split correctly
 set.splitright       	= true
 set.splitbelow       	= true
-set.undodir             = '~/.vim/undodir'
-set.undofile	     	= true	 	-- persistent undo between sessions
 
+set.undodir             = os.getenv("HOME") .. "/.vim/undodir"
+set.undofile	     	= true	 	-- persistent undo between sessions
 -- Not supported in neovim git
 --[[ global.undofile         = true      
 buffer.undofile         = true ]]

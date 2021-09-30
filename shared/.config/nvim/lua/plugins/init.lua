@@ -26,9 +26,6 @@ return require('packer').startup(function()
     use 'nvim-lua/lsp-status.nvim'
     use 'hrsh7th/nvim-compe'
 
-    -- use 'ludovicchabant/vim-gutentags'
-    -- snippets
-    use 'SirVer/ultisnips'
 
     -- telescope.nvim requirements
     use 'nvim-lua/popup.nvim'
@@ -46,7 +43,10 @@ return require('packer').startup(function()
     use 'christoomey/vim-tmux-navigator'
 
     use 'b3nj5m1n/kommentary'
-    use 'justinmk/vim-sneak'
+    use {
+        'justinmk/vim-sneak',
+        run = function() vim.cmd("nnoremap s <Plug>Sneak_s") end -- s to activate sneak
+    }
 
     use {
         'lukas-reineke/indent-blankline.nvim',

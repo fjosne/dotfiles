@@ -44,7 +44,7 @@ require('telescope').setup {
 
 
 util.map('n', '<leader>ff', '<cmd>Telescope find_files find_command=rg,--ignore,--hidden,--files<cr>', util.default_opts)
-util.map('n', '<leader>df', '<cmd>lua require("telescope.builtin").find_files {cwd = "$XDG_CONFIG_HOME/cfg/"}<cr>', util.default_opts)
+util.map('n', '<leader>df', '<cmd>lua require("telescope.builtin").find_files {cwd = "$HOME/.dotfiles/"}<cr>', util.default_opts)
 util.map('n', '<leader>fl', '<cmd>Telescope live_grep<cr>', util.default_opts)
 util.map('n', '<leader>ft', '<cmd>Telescope tags<cr>', util.default_opts)
 util.map('n', '<C-x>d', '<cmd>Telescope file_browser<cr>', util.default_opts)

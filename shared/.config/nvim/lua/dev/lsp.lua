@@ -51,7 +51,7 @@ nvim_lsp.pyright.setup{
 
 
 -- configure lua lsp
-local systemname
+--[[ local systemname
 if vim.fn.has("mac") == 1 then
     systemname = "macOS"
 elseif vim.fn.has("unix") == 1 then
@@ -90,4 +90,4 @@ nvim_lsp.sumneko_lua.setup{
             },
         },
     },
-}
+} ]]

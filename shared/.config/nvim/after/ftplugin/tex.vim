@@ -11,5 +11,7 @@ augroup TexConceal
     au BufWinEnter *.tex let g:completion_trigger_character = [ '\\' ]
 augroup END
 
-nnoremap <leader><leader>c :VimtexCompile<cr>
-nnoremap <leader><leader>cl :VimtexClean<cr>
+ " latex run
+nnoremap <leader><leader>lr :VimtexCompile<cr>
+ " latex clean
+nnoremap <leader><leader>lc :VimtexClean<cr>
