@@ -22,8 +22,15 @@ local dracula = function()
 end
 
 -- dracula()
+vim.opt.background="dark"
 vim.cmd('colo gruvbox')
 
+if os == "Linux" then
+    vim.cmd('au ColorScheme * highlight Normal ctermbg=NONE guibg=NONE')
+end
+
+-- more consistant highlighting of keywords
+vim.cmd('au ColorScheme * highlight link TSKeywordOperator Keyword')
 
 
 vim.g.indentLine_char_list = {'│'}

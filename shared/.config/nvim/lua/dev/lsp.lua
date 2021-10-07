@@ -34,19 +34,31 @@ nvim_lsp.rust_analyzer.setup {
 -- start language servers
 local servers = {"ccls", "pyright"}
 
-for _, lsp in ipairs(servers) do
+--[[ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup { on_attach = custom_attach }
-end
+end ]]
 
 local home = os.getenv('HOME')
 
 nvim_lsp.pyright.setup{
     on_attach = custom_attach,
-    settings = {
+    --[[ root_dir = function(fname)
+        local root_files = {
+            'setup.py',
+            'pyproject.toml',
+            'setup.cfg',
+            'requirements.txt',
+            'Pipfile',
+            'pyrightconfig.json',
+        }
+        return util.root_pattern(unpack(root_files))(fname) or util.find
+    end ]]
+    --[[ settings = {
         python = {
             venvPath = home .. "/opt/anaconda3/envs"
+
         }
-    }
+    } ]]
 }
 
 

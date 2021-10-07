@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/simenfjosne/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/simenfjosne/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/simenfjosne/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/simenfjosne/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/simenfjosne/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/simen/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/simen/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/simen/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/simen/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/simen/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,146 +71,142 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["dracula.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/dracula.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/dracula.nvim"
   },
   ["galaxyline.nvim"] = {
-    config = { "\27LJ\2\n8\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\29customization.statusline\frequire\0" },
+    config = { "\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29customization.statusline\frequire\0" },
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
   ["gitsigns.nvim"] = {
-    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
+    config = { "\27LJ\1\0026\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\rgitsigns\frequire\0" },
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
-  ["gruvbox.nvim"] = {
+  ["gruvbox-material"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/gruvbox.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/gruvbox-material"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
   indentLine = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/indentLine"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/indentLine"
   },
   kommentary = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/kommentary"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/kommentary"
   },
   ["lsp-status.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/lsp-status.nvim"
-  },
-  ["lush.nvim"] = {
-    loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/lush.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/lsp-status.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["one-nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/one-nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/one-nvim"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/opt/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["sql.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/sql.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/sql.nvim"
   },
   ["telescope-bibtex.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/telescope-bibtex.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/telescope-bibtex.nvim"
   },
   ["telescope-cheat.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/telescope-cheat.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/telescope-cheat.nvim"
   },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim"
   },
   ["telescope-snippets.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/telescope-snippets.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/telescope-snippets.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["vim-css-color"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/vim-css-color"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/vim-css-color"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
   ["vim-maximizer"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/vim-maximizer"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/vim-maximizer"
   },
   ["vim-repeat"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/vim-repeat"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/vim-repeat"
   },
   ["vim-sneak"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/vim-sneak"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/vim-sneak"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
   },
   vimtex = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/vimtex"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/vimtex"
   },
   vimwiki = {
     loaded = true,
-    path = "/Users/simenfjosne/.local/share/nvim/site/pack/packer/start/vimwiki"
+    path = "/home/simen/.local/share/nvim/site/pack/packer/start/vimwiki"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: galaxyline.nvim
 time([[Config for galaxyline.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\29customization.statusline\frequire\0", "config", "galaxyline.nvim")
+try_loadstring("\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29customization.statusline\frequire\0", "config", "galaxyline.nvim")
 time([[Config for galaxyline.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\1\0026\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

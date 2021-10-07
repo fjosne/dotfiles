@@ -21,8 +21,8 @@ set.hlsearch	     	= false		    -- only highlight current match
 set.expandtab        	= true      	-- tabs -> spaces
 set.tabstop          	= 4         	-- 1 tab = 4 spaces
 set.shiftwidth       	= 4         	-- 4 spaces when using < or >
-set.autoindent       	= true      	-- keep indentation on newlines
-set.cindent          	= true      	-- automatic C program indenting
+--[[ set.autoindent       	= true      	-- keep indentation on newlines
+set.cindent          	= true      	-- automatic C program indenting ]]
 
 set.swapfile         	= false     	-- dont generate swap files
 set.backup           	= false
@@ -45,7 +45,7 @@ buffer.undofile         = true ]]
 set.formatoptions = 'jcql'
 
 -- use system clipboard
-set.clipboard = 'unnamed'
+set.clipboard = 'unnamedplus'
 
 -- dont pass messages to |ins-completion-menu|
 vim.o.shortmess = vim.o.shortmess..'c'

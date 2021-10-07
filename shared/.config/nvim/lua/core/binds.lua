@@ -6,12 +6,16 @@ util.map('n', 'q:', ':q', util.default_opts)
 util.map('t', '<esc>', '<C-\\><C-n>', util.default_opts) -- Normal mode in terminal
 
 -- nice pane switching
+util.map('n', 'Q', '<nop>', util.default_opts) -- No ex mode
 util.map('n', '<C-h>', '<C-w>h', util.default_opts)
 util.map('n', '<C-j>', '<C-w>j', util.default_opts)
 util.map('n', '<C-k>', '<C-w>k', util.default_opts)
 util.map('n', '<C-l>', '<C-w>l', util.default_opts)
 
+-- Copy/Paste stuff
 util.map('x', '<leader>p', '"_dP', util.default_opts) -- pasting in visual/select mode will not put overwritten text into yank buffer
+util.map('n', '<leader>y', '"*y', util.default_opts)
+
 
 -- move lines up/down in different modes
 

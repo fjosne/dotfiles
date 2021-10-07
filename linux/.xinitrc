@@ -4,7 +4,7 @@
 #
 # Executed by startx (run your window manager from here)
 
-userresources=$HOME/.Xresources
+userresources=$home/.xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
@@ -80,5 +80,5 @@ xrandr --output DisplayPort-0 --auto --output DisplayPort-1 --mode 2560x1440 --r
 
 slstatus &
 ~/.fehbg &
+/usr/bin/dunst &
 picom -b; exec $HOME/bin/startdwm
-# picom -b; exec dwm

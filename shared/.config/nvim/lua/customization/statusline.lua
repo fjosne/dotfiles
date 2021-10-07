@@ -2,7 +2,7 @@
 vim.cmd('set nosmd')
 
 local gl = require('galaxyline')
-local colors = require('colors').dracula
+local colors = require('colors').gruvbox_light
 local condition = require('galaxyline.condition')
 local gls = gl.section
 gl.short_line_list = {'NvimTree','vista','dbui','packer'}
@@ -92,14 +92,14 @@ gls.left[8] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
     -- icon = '  ',
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.red,colors.bg}
   }
 }
 gls.left[9] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.orange,colors.bg},
   }
 }
@@ -108,7 +108,7 @@ gls.left[10] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
     -- icon = '  ',
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.cyan,colors.bg},
   }
 }
@@ -117,7 +117,7 @@ gls.left[11] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
     -- icon = '  ',
-    icon = '  ',
+    icon = '  ',
     highlight = {colors.cyan,colors.bg},
   }
 }
@@ -174,6 +174,7 @@ gls.right[4] = {
   GitBranch = {
     provider = 'GitBranch',
     condition = condition.check_git_workspace,
+    icon = ' ',
     highlight = {colors.violet,colors.bg,'bold'},
   }
 }
@@ -183,7 +184,7 @@ gls.right[5] = {
     provider = 'DiffAdd',
     condition = condition.hide_in_width,
     -- icon = '  ',
-    icon = ' ',
+    icon = ' ',
     highlight = {colors.green,colors.bg},
     separator = ' '
   }
@@ -193,7 +194,7 @@ gls.right[6] = {
     provider = 'DiffModified',
     condition = condition.hide_in_width,
     -- icon = '  ',
-    icon = 'ﰣ ',
+    icon = ' ',
     highlight = {colors.orange,colors.bg},
     separator = ' '
   }
@@ -203,7 +204,7 @@ gls.right[7] = {
     provider = 'DiffRemove',
     condition = condition.hide_in_width,
     -- icon = '  ',
-    icon = ' ',
+    icon = ' ',
     highlight = {colors.red,colors.bg},
     separator = ' '
   }

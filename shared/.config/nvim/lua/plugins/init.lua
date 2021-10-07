@@ -90,11 +90,11 @@ return require('packer').startup(function()
     -- use 'arcticicestudio/nord-vim'
     -- use 'drewtempelmeyer/palenight.vim'
     use 'Th3Whit3Wolf/one-nvim'
+    use 'sainnhe/gruvbox-material'
 
     -- hex colorizer
     use 'ap/vim-css-color'
 
     -- vim-wiki
     use 'vimwiki/vimwiki'
-
-    end)
+end)

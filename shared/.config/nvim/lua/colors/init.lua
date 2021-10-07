@@ -29,5 +29,38 @@ M.onedark = {
     yellow = '#e5c07b'
 }
 
+M.gruvbox_dark = {
+    bg = '#3c3836',
+    bgalt = '#3c3836',
+    fg = '#ebdbb2',
+    fgalt = '#d5c4a1',
+    cyan = '#689d6a',
+    green = '#98971a',
+    orange = '#fe8019',
+    magenta = '#d3869b',
+    violet = '#b16286',
+    red = '#cc241d',
+    blue = '#458588',
+    yellow = '#fabd2f'
+}
+
+M.gruvbox_light = {
+    bg = '#fbf1c7',
+    bgalt = '#ebdbb2',
+    fg = '#3c3836',
+    fgalt = '#504945',
+    cyan = '#689d6a',
+    green = '#98971a',
+    orange = '#d65d0e',
+    magenta = '#b16286',
+    violet = '#8f3f71',
+    red = '#cc241d',
+    blue = '#458588',
+    yellow = '#d79921'
+}
+
+
 
 return M
+
+
