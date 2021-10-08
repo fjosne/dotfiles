@@ -1,6 +1,0 @@
-[submodule "linux/.config/dwm"]
-	path = linux/.config/dwm
-	url = git@github.com:fjosne/dwm.git
-[submodule "linux/.config/slstatus"]
-	path = linux/.config/slstatus
-	url = git@github.com:fjosne/slstatus.git
