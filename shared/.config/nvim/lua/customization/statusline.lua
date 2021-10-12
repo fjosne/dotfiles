@@ -2,7 +2,7 @@
 vim.cmd('set nosmd')
 
 local gl = require('galaxyline')
-local colors = require('colors').gruvbox_light
+local colors = require('colors').gruvbox_dark
 local condition = require('galaxyline.condition')
 local gls = gl.section
 gl.short_line_list = {'NvimTree','vista','dbui','packer'}

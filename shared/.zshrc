@@ -4,6 +4,7 @@
 # vim keybinds
 bindkey -v
 
+#export LANGUAGE=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
@@ -79,9 +80,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Conda
 if [[ `uname` == "Darwin" ]]; then
-    PATH+=$PATH:~/opt/anaconda3/bin/
+    export PATH=$PATH:~/opt/anaconda3/bin/
 elif [[ `uname` == "Linux" ]]; then
-    PATH+=$PATH:/opt/anaconda/bin
+    export PATH=$PATH:/opt/anaconda/bin
 fi
 
 # >>> conda initialize >>>

@@ -81,4 +81,5 @@ xrandr --output DisplayPort-0 --auto --output DisplayPort-1 --mode 2560x1440 --r
 slstatus &
 ~/.fehbg &
 /usr/bin/dunst &
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 picom -b; exec $HOME/bin/startdwm
