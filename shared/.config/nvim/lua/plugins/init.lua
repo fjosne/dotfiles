@@ -16,8 +16,16 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     use {'wbthomason/packer.nvim', opt = true}
     ---- tpope
-    use 'tpope/vim-fugitive'
+    -- use 'tpope/vim-fugitive'
     use 'tpope/vim-repeat'
+
+    -- Git
+    use {'TimUntersberger/neogit', 
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'sindrets/diffview.nvim'
+        }
+    }
 
     use 'windwp/nvim-autopairs'
 
@@ -68,7 +76,7 @@ return require('packer').startup(function()
     use {
       'glepnir/galaxyline.nvim',
         branch = 'main',
-        config = function() require'customization.statusline' end,
+        -- config = function() require'customization.statusline' end,
         -- some optional icons
         requires = {'kyazdani42/nvim-web-devicons', 
             config = function() require'nvim-web-devicons'.setup{default = true} end,
