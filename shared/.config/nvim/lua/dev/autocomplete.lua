@@ -18,10 +18,16 @@ require'compe'.setup {
     omni = true;
     nvim_lsp = true;
     nvim_lua = true;
-    ultisnips = true;
   };
 }
 
+-- Auto pair parens and behave with compe
+require('nvim-autopairs').setup{ disable_filetype = {"TelescopePrompt"}, }
+require('nvim-autopairs.completion.compe').setup({
+    map_cr = true,
+    map_complete = true,
+    auto_select = false,
+})
 
 vim.cmd([[
 let g:UltiSnipsEditSplit = "context"

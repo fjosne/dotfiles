@@ -17,44 +17,47 @@ return require('packer').startup(function()
     use {'wbthomason/packer.nvim', opt = true}
     ---- tpope
     -- use 'tpope/vim-fugitive'
-    use 'tpope/vim-repeat'
+    -- use 'tpope/vim-repeat'
 
     -- Git
     use {'TimUntersberger/neogit', 
         requires = {
             'nvim-lua/plenary.nvim',
-            'sindrets/diffview.nvim'
-        }
+            'sindrets/diffview.nvim',
+            'kyazdani42/nvim-web-devicons', 
+        },
     }
+    use 'dinhhuy258/git.nvim' -- git blame
 
     use 'windwp/nvim-autopairs'
 
+    -- treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+    -- lsp
     use 'neovim/nvim-lspconfig'
     use 'nvim-lua/lsp-status.nvim'
     use 'hrsh7th/nvim-compe'
 
+    -- telescope
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {
+            'nvim-lua/popup.nvim',
+            'nvim-lua/plenary.nvim',
+            -- extensions
+            'nvim-telescope/telescope-fzy-native.nvim',
+            'nvim-telescope/telescope-bibtex.nvim',
+            'nvim-telescope/telescope-snippets.nvim',
+            'tami5/sql.nvim',
+            'nvim-telescope/telescope-cheat.nvim'
 
-    -- telescope.nvim requirements
-    use 'nvim-lua/popup.nvim'
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
-
-    -- telescope.nvim extensions
-    use 'nvim-telescope/telescope-fzy-native.nvim'
-    use 'nvim-telescope/telescope-bibtex.nvim'
-    use 'nvim-telescope/telescope-snippets.nvim'
-    use 'tami5/sql.nvim'
-    use 'nvim-telescope/telescope-cheat.nvim'
+        }
+    }
 
     use 'szw/vim-maximizer'
     use 'christoomey/vim-tmux-navigator'
-
-    use 'b3nj5m1n/kommentary'
-    use {
-        'justinmk/vim-sneak',
-        run = function() vim.cmd("nnoremap s <Plug>Sneak_s") end -- s to activate sneak
-    }
+    use 'numToStr/Comment.nvim'
 
     use {
         'lukas-reineke/indent-blankline.nvim',
@@ -64,45 +67,46 @@ return require('packer').startup(function()
     }
 
     use {
-      'lewis6991/gitsigns.nvim',
-      requires = {
-        'nvim-lua/plenary.nvim'
-      },
-    config = function()
-        require('gitsigns').setup()
-    end
+        'lewis6991/gitsigns.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        },
+        config = function()
+            require('gitsigns').setup()
+        end
     }
 
+    -- use {
+    --   'glepnir/galaxyline.nvim',
+    --     branch = 'main',
+    --     config = function() require'customization.statusline' end,
+    --     -- some optional icons
+    --     requires = {'kyazdani42/nvim-web-devicons',
+    --         config = function() require'nvim-web-devicons'.setup{default = true} end,
+    --         opt = true}
+    -- }
+
     use {
-      'glepnir/galaxyline.nvim',
-        branch = 'main',
-        -- config = function() require'customization.statusline' end,
-        -- some optional icons
-        requires = {'kyazdani42/nvim-web-devicons', 
-            config = function() require'nvim-web-devicons'.setup{default = true} end,
-            opt = true}
+        'hoob3rt/lualine.nvim',
+        requires = {'kyazdani42/nvim-web-devicons',
+            -- config = function() 
+            --     require'nvim-web-devicons'.setup{default = true}
+            -- end,
+            opt = true
+        }
     }
 
     -- Latex supoprt
     use 'lervag/vimtex'
 
     -- colorschemes
-    -- use 'gruvbox-community/gruvbox'
     use {
         'ellisonleao/gruvbox.nvim',
         requires = {'rktjmp/lush.nvim'}
     }
-    -- use 'joshdick/onedark.vim'
-    -- use 'dracula/vim'
     use 'Mofiqul/dracula.nvim'
-    -- use 'arcticicestudio/nord-vim'
-    -- use 'drewtempelmeyer/palenight.vim'
     use 'Th3Whit3Wolf/one-nvim'
-    use 'sainnhe/gruvbox-material'
 
     -- hex colorizer
     use 'ap/vim-css-color'
-
-    -- vim-wiki
-    use 'vimwiki/vimwiki'
 end)

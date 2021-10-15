@@ -1,3 +1,7 @@
+-- example how to remove substring from variable
+-- set.indentkeys = set.indentkeys - {"<:>"}
+-- set.indentkeys = set.indentkeys - {":"}
+
 local set = vim.opt
 
 set.errorbells          = false     	-- no audible error bells
@@ -21,8 +25,8 @@ set.hlsearch	     	= false		    -- only highlight current match
 set.expandtab        	= true      	-- tabs -> spaces
 set.tabstop          	= 4         	-- 1 tab = 4 spaces
 set.shiftwidth       	= 4         	-- 4 spaces when using < or >
---[[ set.autoindent       	= true      	-- keep indentation on newlines
-set.cindent          	= true      	-- automatic C program indenting ]]
+set.autoindent       	= false      	-- keep indentation on newlines
+set.cindent          	= false      	-- automatic C program indenting
 
 set.swapfile         	= false     	-- dont generate swap files
 set.backup           	= false
@@ -52,6 +56,5 @@ vim.o.shortmess = vim.o.shortmess..'c'
 
 -- autocomplete options
 set.completeopt = 'menuone,noinsert,noselect'
-
 
 vim.g.python3_host_prog = vim.env.PYTHON

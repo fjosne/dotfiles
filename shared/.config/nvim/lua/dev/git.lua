@@ -10,6 +10,16 @@ neogit.setup {
 }
 
 
+require('git').setup({
+     keymaps = {
+        -- Open blame window
+        blame = "<Leader>b",
+        -- Close blame window
+        quit_blame = "<Leader>b",
+    }
+})
+
+
 util.map('n', '<leader>gg', ':Neogit<cr>', util.default_opts)
 util.map('n', '<leader>gb', ':Telescope git_branches<cr>', util.default_opts)
 util.map('n', '<leader>gf', ':Telescope git_files<cr>', util.default_opts)
