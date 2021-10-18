@@ -32,74 +32,68 @@ nvim_lsp.rust_analyzer.setup {
 }
 
 -- start language servers
-local servers = {"ccls", "pyright"}
+local servers = {"clangd", "pyright"}
 
---[[ for _, lsp in ipairs(servers) do
+for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup { on_attach = custom_attach }
-end ]]
+end
 
 local home = os.getenv('HOME')
 
 nvim_lsp.pyright.setup{
     on_attach = custom_attach,
-    --[[ root_dir = function(fname)
-        local root_files = {
-            'setup.py',
-            'pyproject.toml',
-            'setup.cfg',
-            'requirements.txt',
-            'Pipfile',
-            'pyrightconfig.json',
-        }
-        return util.root_pattern(unpack(root_files))(fname) or util.find
-    end ]]
-    --[[ settings = {
-        python = {
-            venvPath = home .. "/opt/anaconda3/envs"
-
-        }
-    } ]]
+    -- root_dir = function(fname)
+    --     local root_files = {
+    --         'setup.py',
+    --         'pyproject.toml',
+    --         'setup.cfg',
+    --         'requirements.txt',
+    --         'Pipfile',
+    --         'pyrightconfig.json',
+    --     }
+    --     return util.root_pattern(unpack(root_files))(fname) or util.find
+    -- end
 }
 
 
 -- configure lua lsp
---[[ local systemname
-if vim.fn.has("mac") == 1 then
-    systemname = "macOS"
-elseif vim.fn.has("unix") == 1 then
-    systemname = "Linux"
-elseif vim.fn.has("win32") == 1 then
-    systemname = "Windows"
-end
-
-local sumneko_root_path = '/usr/local/src/lua-language-server'
-local sumneko_binary = sumneko_root_path..'/bin/'..systemname..'/lua-language-server'
-
-nvim_lsp.sumneko_lua.setup{
-    on_attach = custom_attach,
-    cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" };
-    settings = {
-        Lua = {
-            runtime = {
-                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                version = 'LuaJIT',
-                -- Setup your lua path
-                path = vim.split(package.path, ';'),
-            },
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {'vim'},
-            },
-            workspace = {
-                -- Make the server aware of Neovim runtime files
-                library = {
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-                },
-            },
-            telemetry = {
-                enable = false
-            },
-        },
-    },
-} ]]
+-- local systemname
+-- if vim.fn.has("mac") == 1 then
+--     systemname = "macOS"
+-- elseif vim.fn.has("unix") == 1 then
+--     systemname = "Linux"
+-- elseif vim.fn.has("win32") == 1 then
+--     systemname = "Windows"
+-- end
+-- 
+-- local sumneko_root_path = '/usr/local/src/lua-language-server'
+-- local sumneko_binary = sumneko_root_path..'/bin/'..systemname..'/lua-language-server'
+-- 
+-- nvim_lsp.sumneko_lua.setup{
+--     on_attach = custom_attach,
+--     cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" };
+--     settings = {
+--         Lua = {
+--             runtime = {
+--                 -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+--                 version = 'LuaJIT',
+--                 -- Setup your lua path
+--                 path = vim.split(package.path, ';'),
+--             },
+--             diagnostics = {
+--                 -- Get the language server to recognize the `vim` global
+--                 globals = {'vim'},
+--             },
+--             workspace = {
+--                 -- Make the server aware of Neovim runtime files
+--                 library = {
+--                     [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+--                     [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
+--                 },
+--             },
+--             telemetry = {
+--                 enable = false
+--             },
+--         },
+--     },
+-- }

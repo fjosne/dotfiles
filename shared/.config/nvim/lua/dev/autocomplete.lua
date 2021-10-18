@@ -21,20 +21,7 @@ require'compe'.setup {
   };
 }
 
--- Auto pair parens and behave with compe
-require('nvim-autopairs').setup{ disable_filetype = {"TelescopePrompt"}, }
-require('nvim-autopairs.completion.compe').setup({
-    map_cr = true,
-    map_complete = true,
-    auto_select = false,
-})
-
 vim.cmd([[
-let g:UltiSnipsEditSplit = "context"
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpbackwardTrigger = "<S-tab>"
-
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')

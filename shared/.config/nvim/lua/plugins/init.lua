@@ -29,7 +29,10 @@ return require('packer').startup(function()
     }
     use 'dinhhuy258/git.nvim' -- git blame
 
-    use 'windwp/nvim-autopairs'
+    -- parenthesis stuff
+    -- use 'windwp/nvim-autopairs'
+    use 'steelsojka/pears.nvim'
+    use 'blackCauldron7/surround.nvim'
 
     -- treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }

@@ -4,8 +4,16 @@ require('Comment').setup({
     ignore = '^$'
 })
 
--- vim-maximizer: maximize current split with <leader>m
-util.map('n', '<leader>m', ':MaximizerToggle<cr>', util.default_opts)
+require('pears').setup(
+    function(conf)
+        conf.expand_on_enter(true)
+    end
+)
 
--- TODO: Surround, dispatch
+require('surround').setup({
+    mappings_style = "surround"
+})
+
+
+-- TODO: dispatch
 
