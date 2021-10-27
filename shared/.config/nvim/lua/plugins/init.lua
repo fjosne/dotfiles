@@ -40,7 +40,19 @@ return require('packer').startup(function()
     -- lsp
     use 'neovim/nvim-lspconfig'
     use 'nvim-lua/lsp-status.nvim'
-    use 'hrsh7th/nvim-compe'
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            'saadparwaiz1/cmp_luasnip', -- For snippets completion
+            'hrsh7th/cmp-nvim-lsp',     -- For lsp completion
+            'hrsh7th/cmp-buffer'        -- For buffer completion
+        }
+    }
+    use 'onsails/lspkind-nvim'
+    use 'glepnir/lspsaga.nvim'
+
+    -- snippets
+    use 'L3MON4D3/LuaSnip'
 
     -- telescope
     use {
@@ -54,7 +66,6 @@ return require('packer').startup(function()
             'nvim-telescope/telescope-snippets.nvim',
             'tami5/sql.nvim',
             'nvim-telescope/telescope-cheat.nvim'
-
         }
     }
 
@@ -109,7 +120,15 @@ return require('packer').startup(function()
     }
     use 'Mofiqul/dracula.nvim'
     use 'Th3Whit3Wolf/one-nvim'
+    use 'sainnhe/gruvbox-material'
 
     -- hex colorizer
     use 'ap/vim-css-color'
+
+    -- org mode
+    use {
+        'kristijanhusak/orgmode.nvim',
+        branch = 'tree-sitter'
+    }
+
 end)

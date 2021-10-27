@@ -24,7 +24,7 @@ end
 
 -- dracula()
 vim.opt.background="dark"
-vim.cmd('colo gruvbox')
+vim.cmd('colo gruvbox-material')
 
 if os == "Linux" then
     vim.cmd('au ColorScheme * highlight Normal ctermbg=NONE guibg=NONE')

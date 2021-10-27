@@ -23,6 +23,7 @@ local custom_attach = function(client)
 end
 
 local nvim_lsp = require('lspconfig')
+local saga = require('lspsaga')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -35,25 +36,30 @@ nvim_lsp.rust_analyzer.setup {
 local servers = {"clangd", "pyright"}
 
 for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup { on_attach = custom_attach }
+    nvim_lsp[lsp].setup {
+        on_attach = custom_attach,
+        capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    }
 end
 
-local home = os.getenv('HOME')
+saga.init_lsp_saga()
 
-nvim_lsp.pyright.setup{
-    on_attach = custom_attach,
-    -- root_dir = function(fname)
-    --     local root_files = {
-    --         'setup.py',
-    --         'pyproject.toml',
-    --         'setup.cfg',
-    --         'requirements.txt',
-    --         'Pipfile',
-    --         'pyrightconfig.json',
-    --     }
-    --     return util.root_pattern(unpack(root_files))(fname) or util.find
-    -- end
-}
+-- local home = os.getenv('HOME')
+
+-- nvim_lsp.pyright.setup{
+--     on_attach = custom_attach,
+--     -- root_dir = function(fname)
+--     --     local root_files = {
+--     --         'setup.py',
+--     --         'pyproject.toml',
+--     --         'setup.cfg',
+--     --         'requirements.txt',
+--     --         'Pipfile',
+--     --         'pyrightconfig.json',
+--     --     }
+--     --     return util.root_pattern(unpack(root_files))(fname) or util.find
+--     -- end
+-- }
 
 
 -- configure lua lsp

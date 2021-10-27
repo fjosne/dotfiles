@@ -5,7 +5,7 @@ vim.cmd('set nosmd')
 -- | A | B | C            X | Y | Z |
 require('lualine').setup({
     options = {
-        -- theme = 'gruvbox',
+        theme = 'gruvbox',
         component_separators = {'', ''},
         section_separators = {'', ''},
     },

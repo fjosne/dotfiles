@@ -15,6 +15,7 @@ require'nvim-treesitter.configs'.setup {
         "bibtex",
         "regex",
         "vim",
+        "org",
     }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     highlight = {
         enable = true,              -- Enable syntax highlighting

@@ -14,6 +14,7 @@ export PATH=$PATH:$HOME/opt/nvim/bin/
 export PATH=$PATH:$HOME/bin
 export PATH=$PATH:/Users/simenfjosne/Library/Python/3.9/bin
 export PATH=$PATH:$HOME/.local/bin/
+export PATH=$PATH:/usr/local/Cellar/llvm/13.0.0_1/bin/
 
 export XDG_CONFIG_HOME=$HOME/.config/
 
