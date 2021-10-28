@@ -8,9 +8,8 @@ MSGID="93485"
 
 amixer -D pulse sset Master $CHANGE > /dev/null
 
-vol="$(amixer -D pulse get Master | tail -1 |  awk -F '[][]' '{print $2}')" #awk '{print $4}' | sed 's/[^0-9]*//g')"
-mute="$(amixer -D pulse get Master | tail -1 | awk '{print $5}' | sed 's/[^a-z]*//g')"
+vol="$(pamixer --get-volume-human)"
 
-[[ "$vol" == "0" || "$mute" == "off" ]] && dunstify -a "volctrl" -u low -i audio-volume-muted -r "$MSGID" "Muted" && exit
+[[ "$vol" == "muted" ]] && dunstify -a "volctrl" -u low -i audio-volume-muted -r "$MSGID" "Muted" && exit
 
 dunstify -a "volctrl" -u low -i audio-volume-high -r "$MSGID" -h int:value:"$vol" "Volume: ${vol}%"
