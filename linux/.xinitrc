@@ -71,7 +71,7 @@ xset fp rehash
 
 setxkbmap no -option 'caps:ctrl_modifier'
 xcape -e 'Caps_Lock=Escape'
-setxkbmap -layout no,us -option grp:win_space_toggle
+setxkbmap -layout no,us -option grp:sclk_toggle
 
 # Set display resolutions
 # DisplayPort-0 = LG 1440p
