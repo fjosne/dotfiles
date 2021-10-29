@@ -7,7 +7,9 @@ local custom_attach = function(client)
 
     util.map('n', '<leader>vd',  '<cmd>lua vim.lsp.buf.definition()<cr>', util.default_opts);                        -- view definition
     util.map('n', '<leader>vD',  '<cmd>lua vim.lsp.buf.declaration()<cr>', util.default_opts);                       -- view declaration
-    util.map('n', 'K',           '<cmd>lua vim.lsp.buf.hover()<cr>', util.default_opts);                             -- view hover info
+    util.map('n', 'K',           '<cmd>lua require("lspsaga.hover").render_hover_doc()<cr>', util.default_opts);                             -- view hover info
+    util.map('n', '<C-f>',       '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<cr>', util.default_opts);                             -- view hover info
+    util.map('n', '<C-b>',       '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(-1)<cr>', util.default_opts);                             -- view hover info
     util.map('n', '<leader>vi',  '<cmd>lua vim.lsp.buf.implementation()<cr>', util.default_opts);                    -- view implementation
     util.map('n', '<leader>vr',  '<cmd>Telescope lsp_references<cr>', util.default_opts);                            -- view references
     util.map('n', '<leader>rn',  '<cmd>lua vim.lsp.buf.rename()<cr>', util.default_opts);                            -- rename all references
@@ -24,6 +26,7 @@ end
 
 local nvim_lsp = require('lspconfig')
 local saga = require('lspsaga')
+saga.init_lsp_saga()
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -42,7 +45,6 @@ for _, lsp in ipairs(servers) do
     }
 end
 
-saga.init_lsp_saga()
 
 -- local home = os.getenv('HOME')
 

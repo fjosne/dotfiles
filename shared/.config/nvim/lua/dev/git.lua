@@ -19,6 +19,14 @@ require('git').setup({
     }
 })
 
+require('gitsigns').setup({
+    current_line_blame = true,
+    current_line_blame_opts = {
+        virt_text_pos = 'eol',
+        delay = 0
+    }
+
+})
 
 util.map('n', '<leader>gg', ':Neogit<cr>', util.default_opts)
 util.map('n', '<leader>gb', ':Telescope git_branches<cr>', util.default_opts)

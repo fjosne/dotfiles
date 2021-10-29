@@ -15,9 +15,6 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
     use {'wbthomason/packer.nvim', opt = true}
-    ---- tpope
-    -- use 'tpope/vim-fugitive'
-    -- use 'tpope/vim-repeat'
 
     -- Git
     use {'TimUntersberger/neogit', 
@@ -30,7 +27,6 @@ return require('packer').startup(function()
     use 'dinhhuy258/git.nvim' -- git blame
 
     -- parenthesis stuff
-    -- use 'windwp/nvim-autopairs'
     use 'steelsojka/pears.nvim'
     use 'blackCauldron7/surround.nvim'
 
@@ -84,21 +80,8 @@ return require('packer').startup(function()
         'lewis6991/gitsigns.nvim',
         requires = {
             'nvim-lua/plenary.nvim'
-        },
-        config = function()
-            require('gitsigns').setup()
-        end
+        }
     }
-
-    -- use {
-    --   'glepnir/galaxyline.nvim',
-    --     branch = 'main',
-    --     config = function() require'customization.statusline' end,
-    --     -- some optional icons
-    --     requires = {'kyazdani42/nvim-web-devicons',
-    --         config = function() require'nvim-web-devicons'.setup{default = true} end,
-    --         opt = true}
-    -- }
 
     use {
         'hoob3rt/lualine.nvim',

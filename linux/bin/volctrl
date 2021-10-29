@@ -1,0 +1,15 @@
+#!/usr/bin/sh
+
+CHANGE=$1
+
+MSGID="93485"
+
+[[ -z $CHANGE ]] && echo "Provide command volume value" && exit
+
+amixer -D pulse sset Master $CHANGE > /dev/null
+
+vol="$(pamixer --get-volume-human)"
+
+[[ "$vol" == "muted" ]] && dunstify -a "volctrl" -u low -i audio-volume-muted -r "$MSGID" "Muted" && exit
+
+dunstify -a "volctrl" -u low -i audio-volume-high -r "$MSGID" -h int:value:"$vol" "Volume: ${vol}%"

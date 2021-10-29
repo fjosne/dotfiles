@@ -1,0 +1,16 @@
+#!/bin/env python
+
+import os
+import getpass
+import subprocess
+import dmenu
+
+
+ls = subprocess.check_output(['ls'])
+s = ''.join(map(chr, ls)).split('\n')[:-1]
+
+print(s)
+
+out = dmenu.show(s, prompt='login')
+print(out)
+

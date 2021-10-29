@@ -24,10 +24,10 @@ end
 
 -- dracula()
 vim.opt.background="dark"
-vim.cmd('colo gruvbox-material')
+vim.cmd('colo gruvbox')
 
 if os == "Linux" then
-    vim.cmd('au ColorScheme * highlight Normal ctermbg=NONE guibg=NONE')
+    vim.cmd('highlight Normal ctermbg=NONE guibg=NONE')
 end
 
 -- more consistent highlighting of keywords
