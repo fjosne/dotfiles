@@ -114,4 +114,9 @@ return require('packer').startup(function()
         branch = 'tree-sitter'
     }
 
+    use {
+        'github/copilot.vim',
+        tag = 'neovim-nightlies'
+    }
+
 end)
