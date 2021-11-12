@@ -1,0 +1,19 @@
+! Dracula Xresources palette
+#define fg  #F8F8F2
+#define bg  #282A36
+#define c0  #000000   
+#define c8  #4D4D4D   
+#define c1  #FF5555   
+#define c9  #FF6E67   
+#define c2  #50FA7B   
+#define c10 #5AF78E   
+#define c3  #F1FA8C   
+#define c11 #F4F99D   
+#define c4  #BD93F9   
+#define c12 #CAA9FA   
+#define c5  #FF79C6   
+#define c13 #FF92D0   
+#define c6  #8BE9FD   
+#define c14 #9AEDFE   
+#define c7  #BFBFBF
+#define c15 #E6E6E6

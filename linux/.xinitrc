@@ -76,7 +76,7 @@ setxkbmap -layout no,us -option grp:sclk_toggle
 # Set display resolutions
 # DisplayPort-0 = LG 1440p
 # DisplayPort-1 = LG 4K
-xrandr --output DisplayPort-0 --auto --output DisplayPort-1 --mode 2560x1440 --right-of DisplayPort-0
+xrandr --output DisplayPort-0 --auto --output DisplayPort-1 --mode 2560x1440 --left-of DisplayPort-0
 
 slstatus &
 ~/.fehbg &

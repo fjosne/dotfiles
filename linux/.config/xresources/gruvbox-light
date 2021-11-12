@@ -1,0 +1,23 @@
+! Gruvbox light
+! hard contrast: *background: #f9f5d7
+! soft contrast: *background: #f2e5bc
+#define bg      #fbf1c7
+#define bghard  #f9f5d7
+#define bgsoft  #f2e5bc
+#define fg      #3c3836
+#define c0      #fdf4c1
+#define c8      #928374
+#define c1      #cc241d
+#define c9      #9d0006
+#define c2      #98971a
+#define c10     #79740e
+#define c3      #d79921
+#define c11     #b57614
+#define c4      #458588
+#define c12     #076678
+#define c5      #b16286
+#define c13     #8f3f71
+#define c6      #689d6a
+#define c14     #427b58
+#define c7      #7c6f64
+#define c15     #3c3836
