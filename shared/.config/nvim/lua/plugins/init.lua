@@ -111,7 +111,6 @@ return require('packer').startup(function()
     -- org mode
     use {
         'kristijanhusak/orgmode.nvim',
-        branch = 'tree-sitter'
     }
 
     use {
